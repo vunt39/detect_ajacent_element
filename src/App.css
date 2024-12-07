@@ -1,0 +1,200 @@
+
+/* App.css */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.grid {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  transition: background-color 0.3s;
+}
+
+.removing {
+  animation: fadeOut 0.5s forwards;
+  /* Fade out effect */
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.highlighted {
+  background-color: yellow;
+  transition: background-color 0.3s ease;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content label {
+  margin: 10px 0;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-settings label {
+  margin-bottom: 10px;
+}
+
+.modal-actions {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.modal-actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-actions button:hover {
+  background-color: #0056b3;
+}
+
+.introModal {
+  background-image: url('/images/mc2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60%;
+  background-position: -70px bottom;
+  /* background-position: center; */
+}
+
+.speech-bubble-cartoon {
+  width: 90%;
+  padding: 20px;
+  border: 3px solid black;
+  border-radius: 50px;
+  background: white;
+  position: relative;
+}
+
+.speech-bubble-cartoon::after {
+  content: '';
+  position: absolute;
+  bottom: -32px;
+  left: 50px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-top-color: black;
+}
+
+.text-transition {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.text-transition.hide {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.text-transition.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-lg {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.text-lg.fade-out {
+  opacity: 0;
+}
+
+.text-lg.fade-in {
+  opacity: 1;
+}
