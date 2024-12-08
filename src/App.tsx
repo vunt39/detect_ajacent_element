@@ -165,16 +165,16 @@ const App: React.FC = () => {
     return (
         <div className="App">
             <div className="flex justify-center items-center flex-col">
-                <h1>Grid Matching Game</h1>
+                <img src="/images/banner.png" alt="" />
                 <div className="button-container">
                     <button onClick={() => setIsModalOpen(true)}>
                         Customize Grid
                     </button>
+                    <div className="scoreboard">
+                        <p>Score: {score}</p>
+                        <p>High Score: {highScore}</p>
+                    </div>
                     <button onClick={resetGrid}>Reset Grid</button>
-                </div>
-                <div className="scoreboard">
-                    <p>Score: {score}</p>
-                    <p>High Score: {highScore}</p>
                 </div>
                 <div className="grid">{renderGrid()}</div>
             </div>
