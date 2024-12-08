@@ -1,8 +1,6 @@
 import { useState } from 'react';
 
 const GameIntroModal = ({ onClose }: { onClose: () => void }) => {
-    
-
     const steps = [
         {
             description: 'Welcome to the game!',
@@ -25,7 +23,7 @@ const GameIntroModal = ({ onClose }: { onClose: () => void }) => {
             setTimeout(() => {
                 setCurrentStep((prev) => prev + 1);
                 setFadeClass('fade-in');
-            }, 500)
+            }, 500);
         } else {
             onClose();
         }
@@ -36,9 +34,7 @@ const GameIntroModal = ({ onClose }: { onClose: () => void }) => {
             <div className="bg-white rounded-lg p-5 w-full h-full max-w-xl text-center introModal flex flex-row justify-end">
                 <div className="block w-2/4 pl-5 h-full flex flex-col justify-between">
                     <div className="speech-bubble-cartoon text-transition">
-                        <p
-                            className={`text-lg ${fadeClass}`}
-                        >
+                        <p className={`text-lg ${fadeClass}`}>
                             {steps[currentStep].description}
                         </p>
                     </div>
